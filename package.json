@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "stablehordeProxy.js",
  "scripts": {
-  "proxy": "node stablehordeProxy.js",
-  "dev": "nodemon stablehordeProxy.js"
+  "proxy": "node index.js",
+  "dev": "nodemon index.js"
 }
 ,
   "dependencies": {
