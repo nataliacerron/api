@@ -15,7 +15,7 @@ app.post("/api/generate", async (req, res) => {
     console.log("📨 Payload recibido en el proxy:", req.body); // 👈 Agregá este log
 
   try {
-    const response = await fetch("https://api-one-beta-60.vercel.app/api/generate", {
+    const response = await fetch("https://stablehorde.net/api/v2/generate/async", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ app.post("/api/generate", async (req, res) => {
 app.get("/api/generate/status/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const response = await fetch(`https://api-one-beta-60.vercel.app/api/generate/status/${data.id}`, {
+    const response = await fetch(`https://stablehorde.net/api/v2/generate/status/${id}`, {
       headers: {
         "apikey": process.env.HORDE_API_KEY  || "tu_api_key_aqui",
         "client_agent": "MiApp/1.0",
